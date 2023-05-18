@@ -1,0 +1,44 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/128.png",
+         "48": "icons/48.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_extName__"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "content-script.js" ],
+      "matches": [ "*://*.instagram.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "default_locale": "en",
+   "description": "__MSG_extDescription__",
+   "homepage_url": "https://soletstalkapp.com",
+   "host_permissions": [ "https://*.instagram.com/*" ],
+   "icons": {
+      "128": "icons/128.png",
+      "48": "icons/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgOu6Y1PKeTqwwGbSycquY5LrKaOB1HlmWXEGiJhYXhxe7QZmPB8brGZVyZww57YzNGpFUkRRE43Xch794kb79ra9U459vLLk0ePIuGaTuBf1iZnkNPowdJ/yJ0SHY4VYK3agh1ykQg0zsuXtzb0JD9QcN16HJ6Ksxqo0vP8oWuT2Yl1SckNG/DE1LfkXkB+ppociDpqY6Zfc15q1PkujPocDwOUmOTCDhyVK+Fh98WofDNTg1SshIbkbGlXF23lM5DXlWNvRwPILTmajxsJf8OR/HRYFdV7h90TUHs3SntaE/RK/ri180NqvomKRXtGlxGjcb6Hfhz34OVIvbm2mxQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extName__",
+   "oauth2": {
+      "client_id": "822420326057-m93k691553m6m1lj3l5jn2r40qjcg7rs.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/userinfo.email" ]
+   },
+   "permissions": [ "cookies", "storage", "identity", "identity.email" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "injected.js" ]
+   } ]
+}
