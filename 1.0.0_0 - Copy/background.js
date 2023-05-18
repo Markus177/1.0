@@ -1,5 +1,4 @@
-//generate code to be injected into the page so login or signup is not required
-function generateCode() {
+
 ;(function (e) {
   var t = {}
   function r(n) {
@@ -3174,6 +3173,5 @@ function generateCode() {
     var n = r('da84')
     e.exports = n.Promise
   },
-})}
-//# sourceMappingURL=chunk-vendors.8a7b1f9e.js.map
+})
 
